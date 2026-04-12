@@ -29,237 +29,45 @@ Pretendard의 배경과 특징, OpenType 기능 등을 설명하는 자세한 �
 
 ## 웹폰트
 
-CDN을 이용해 Pretendard를 사용할 수 있으며, 토글을 확인해 기본적으로 추천하는 jsDelivr 외에도 cdnjs와 UNPKG 중에 원하는 CDN을 사용하실 수 있습니다.
+Pretendard는 CDN을 통해 웹폰트로 사용할 수 있습니다.
 
----
+### 추천: 가변 다이나믹 서브셋
 
-모든 기능을 포함한 Pretendard를 웹폰트로 사용하려면 아래 코드를 사용하세요. 사용하는 font-family 이름은 `Pretendard` 입니다.
+가변 Weight 속성을 지원하며, 페이지에 필요한 글자만 선택적으로 다운로드해 **가장 빠르고 효율적**으로 Pretendard를 사용할 수 있는 방법입니다. 사용하는 font-family 이름은 `"Pretendard Variable"` 입니다.
 
-#### HTML
-
-```html
-<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-```
-
-<details>
-
-<summary>cdnjs 및 UNPKG</summary>
-
-###### cdnjs
-
-```html
-<link rel="stylesheet" as="style" crossorigin href="https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/static/pretendard.min.css" />
-```
-
-###### UNPKG
-
-```html
-<link rel="stylesheet" as="style" crossorigin href="https://unpkg.com/pretendard@1.3.9/dist/web/static/pretendard.css" />
-```
-
-</details>
-
-#### CSS
-
-```css
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
-```
-
-<details>
-
-<summary>cdnjs 및 UNPKG</summary>
-
-###### cdnjs
-
-```css
-@import url("https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/static/pretendard.min.css");
-```
-
-###### UNPKG
-
-```css
-@import url("https://unpkg.com/pretendard@1.3.9/dist/web/static/pretendard.css");
-```
-
-</details>
-
----
-
-### 다이나믹 서브셋
-
-Pretendard에서는 웹폰트 용량 문제를 해결하기 위한 방법으로 Google Fonts에서 제공하는 한글 글꼴과 동일한 방식으로 동적 서브셋을 제공합니다. 페이지에 포함된 글자만 선택적으로 다운로드해 보다 빠르게 Pretendard를 사용하려면 아래 코드를 사용하세요. 사용하는 font-family 이름은 `Pretendard` 입니다.
-
-#### HTML
-
-```html
-<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
-```
-
-<details>
-
-<summary>cdnjs 및 UNPKG</summary>
-
-###### cdnjs
-
-```html
-<link rel="stylesheet" as="style" crossorigin href="https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/static/pretendard-dynamic-subset.min.css" />
-```
-
-###### UNPKG
-
-```html
-<link rel="stylesheet" as="style" crossorigin href="https://unpkg.com/pretendard@1.3.9/dist/web/static/pretendard-dynamic-subset.css" />
-```
-
-</details>
-
-#### CSS
-
-```css
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
-```
-
-<details>
-
-<summary>cdnjs 및 UNPKG</summary>
-
-###### cdnjs
-
-```css
-@import url("https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/static/pretendard-dynamic-subset.min.css");
-```
-
-###### UNPKG
-
-```css
-@import url("https://unpkg.com/pretendard@1.3.9/dist/web/static/pretendard-dynamic-subset.css");
-```
-
-</details>
-
----
-
-### 가변 다이나믹 서브셋
-
-가변 다이나믹 서브셋으로 가변 Weight 속성과 함께 기존 다이나믹 서브셋보다 현저히 적은 용량으로 Pretendard를 사용할 수 있습니다. 모던 브라우저에서 더욱 쾌적하게 Pretendard를 사용하려면 아래 코드를 사용하세요. 사용하는 font-family 이름은 `"Pretendard Variable"` 입니다.
-
-#### HTML
+HTML의 `<head>` 태그 안에 아래 코드를 추가하세요:
 
 ```html
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
 ```
 
+그리고 CSS에서 font-family를 지정하세요:
+
+```css
+body {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+```
+
 <details>
 
-<summary>cdnjs 및 UNPKG</summary>
+<summary>다른 방법 보기</summary>
 
-###### cdnjs
+#### CSS import 사용
 
-```html
-<link rel="stylesheet" as="style" crossorigin href="https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/variable/pretendardvariable-dynamic-subset.min.css" />
-```
-
-###### UNPKG
-
-```html
-<link rel="stylesheet" as="style" crossorigin href="https://unpkg.com/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css" />
-```
-
-</details>
-
-#### CSS
+HTML `<link>` 태그 대신 CSS에서 직접 불러올 수도 있습니다:
 
 ```css
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
 ```
 
-<details>
+#### 다른 CDN 사용
 
-<summary>cdnjs 및 UNPKG</summary>
-
-###### cdnjs
-
-```css
-@import url("https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/variable/pretendardvariable-dynamic-subset.min.css");
-```
-
-###### UNPKG
-
-```css
-@import url("https://unpkg.com/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css");
-```
+cdnjs, UNPKG 등 다른 CDN을 사용하거나, 다이나믹 서브셋·가변 글꼴·정적 글꼴 등 다른 옵션이 필요한 경우 [웹폰트 가이드](/packages/pretendard/docs/webfonts.md)를 참고하세요.
 
 </details>
 
----
-
-### 가변 글꼴
-
-가변 weight 속성을 사용하려면 아래 코드를 사용하세요. 사용하는 font-family 이름은 `"Pretendard Variable"` 입니다.
-
-#### HTML
-
-```html
-<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
-```
-
-<details>
-
-<summary>cdnjs 및 UNPKG</summary>
-
-###### cdnjs
-
-```html
-<link rel="stylesheet" as="style" crossorigin href="https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/variable/pretendardvariable.min.css" />
-```
-
-###### UNPKG
-
-```html
-<link rel="stylesheet" as="style" crossorigin href="https://unpkg.com/pretendard@1.3.9/dist/web/variable/pretendardvariable.css" />
-```
-
-</details>
-
-#### CSS
-
-```css
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
-```
-
-<details>
-
-<summary>cdnjs 및 UNPKG</summary>
-
-###### cdnjs
-
-```css
-@import url("https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/variable/pretendardvariable.min.css");
-```
-
-###### UNPKG
-
-```css
-@import url("https://unpkg.com/pretendard@1.3.9/dist/web/variable/pretendardvariable.css");
-```
-
-</details>
-
----
-
-### font-family
-
-시스템에 가능한 맞추고자 한다면 아래와 같은 font-family 구성을 추천합니다.
-
-```css
-font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, Roboto, "Noto Sans KR", "Segoe UI", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-```
-
-어디서든 동일한 환경을 가지고자 한다면 아래와 같은 font-family 구성을 추천합니다.
-
-```css
-font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-```
+👉 모든 웹폰트 옵션에 대한 자세한 안내는 [웹폰트 가이드](/packages/pretendard/docs/webfonts.md)를 참고하세요.
 
 ## 패키지
 
@@ -308,19 +116,46 @@ yay -S ttf-pretendard
 
 ## Next.js
 
-Next.js에서 로컬 폰트 기능을 활용하여 Pretendard를 사용할 수 있습니다.
+Next.js에서는 `next/font/local`을 사용한 로컬 폰트 방식을 권장합니다. CDN의 CSS import 방식보다 성능과 안정성이 뛰어납니다.
 
-```ts
-import localFont from 'next/font/local'
+### 1. 패키지 설치
 
-const pretendard = localFont({
-  src: './fonts/PretendardVariable.woff2',
-  display: 'swap',
-  weight: '45 920',
-})
+```bash
+npm i pretendard
 ```
 
-`weight` 옵션을 지정하지 않으면 WebKit 기반의 브라우저에서 굵기가 잘못 렌더링 될 수 있으니 주의해 주세요.
+### 2. 폰트 설정
+
+```ts
+// app/layout.tsx 또는 pages/_app.tsx
+import localFont from "next/font/local";
+
+const pretendard = localFont({
+  src: "./fonts/PretendardVariable.woff2",
+  display: "swap",
+  weight: "45 920",
+  variable: "--font-pretendard",
+});
+```
+
+### 3. 레이아웃에 적용
+
+```tsx
+// app/layout.tsx (App Router)
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="ko" className={`${pretendard.variable}`}>
+      <body className={pretendard.className}>{children}</body>
+    </html>
+  );
+}
+```
+
+> ⚠️ `weight` 옵션을 지정하지 않으면 WebKit 기반의 브라우저에서 굵기가 잘못 렌더링 될 수 있으니 주의해 주세요.
 
 ## 크레딧
 
