@@ -127,7 +127,7 @@ npm i pretendard
 ### 2. 폰트 설정
 
 ```ts
-// app/layout.tsx 또는 pages/_app.tsx
+// app/layout.tsx
 import localFont from "next/font/local";
 
 const pretendard = localFont({

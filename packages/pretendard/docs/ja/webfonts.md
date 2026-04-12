@@ -66,7 +66,7 @@ CDNを利用してPretendardを使用することができ、基本的にjsDeliv
 
 ## ダイナミックサブセット
 
-Pretendardは、Webフォントの容量の問題を解決するための方法として、Google Fontsで提供されるNoto Sans JPと同じ方法で動的サブセットを提供します。ページに含まれている文字のみを選択的にダウンロードしてより早くPretendardを表示するには、下記のコードを使用してください。使用するfont-family名は`Pretendard`です。
+Pretendardは、Webフォントの容量の問題を解決するための方法として、Google Fontsで提供されるNoto Sans JPと同じ方法で動的サブセットを提供します。ページに含まれている文字のみを選択的にダウンロードしてより速くPretendardを表示するには、下記のコードを使用してください。使用するfont-family名は`Pretendard`です。
 
 #### HTML
 
